@@ -1,6 +1,5 @@
 package com.devsuperior.camiladslist.entities;
 
-
 import java.util.Objects;
 
 import jakarta.persistence.Column;

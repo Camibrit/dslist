@@ -1,5 +1,7 @@
 package com.devsuperior.camiladslist.controllers;
 
+import java.util.List;
+
 import com.devsuperior.camiladslist.dto.GameDTO;
 import com.devsuperior.camiladslist.dto.GameMinDTO;
 import com.devsuperior.camiladslist.services.GameService;
@@ -9,11 +11,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 
 @RestController
 @RequestMapping(value = "/games")
 public class GameController {
+
     @Autowired
     private GameService gameService;
 

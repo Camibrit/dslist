@@ -1,6 +1,6 @@
 package com.devsuperior.camiladslist.dto;
 
-import com.devsuperior.camiladslist.entities.Game;
+import com.devsuperior.camiladslist.projection.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -10,23 +10,15 @@ public class GameMinDTO {
     private String imgUrl;
     private String shortDescription;
 
-    public GameMinDTO(Game entity) {
-        id = entity.getId();
-        title = entity.getTitle();
-        year = entity.getYear();
-        imgUrl = entity.getImgUrl();
-        shortDescription = entity.getShortDescription();
+    // Construtor para GameMinProjection
+    public GameMinDTO(GameMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getGameYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
     }
 
-    public Integer getYear() {
-        return year;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public String getShortDescription() {
-        return shortDescription;
-    }
+    // Métodos getters...
 }
+
