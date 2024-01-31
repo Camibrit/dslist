@@ -31,7 +31,7 @@ public class GameService {
         return result.stream().map(GameMinDTO::new).toList();
     }
 
-    @Transactional(readOnly = true)gis
+    
     public List<GameMinDTO> findByGameList(Long listId) {
         List<GameMinProjection> games = gameRepository.searchByList(listId);
         return games.stream().map(GameMinDTO::new).toList();

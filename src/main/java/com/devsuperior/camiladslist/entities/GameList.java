@@ -58,3 +58,5 @@ public class GameList {
         return Objects.equals(id, other.id);
     }
 }
+
+
